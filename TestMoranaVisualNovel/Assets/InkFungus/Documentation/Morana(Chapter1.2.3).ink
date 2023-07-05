@@ -13,14 +13,15 @@ VAR Maze = 0
 //Chapter 1.1 (introduction)
 #backgroundfield1
 
-->InsideCave
+->Chapter1
 === Chapter1 ===
 #introductionmusic
-This happened five years before the main events. 
+This happened five years before the main event. 
 Back then, I couldn't imagine what is going to happen to me and the terrible truth about myself that I would have to uncover, the choices I would have to make.
 It all started in a small shelter where many children ended up being because they lost their parents during the war.
-That morning turned out to be surprisingly good. We were eating our favorite food-potatos,when we started playing with it and been keaked out to stay outside.
-Suddenly, Alexei "Hey, catch!" 
+That morning turned out to be surprisingly good. We were eating our favorite food-potatos,when we started playing with it and got keaked out to stay outside.
+Suddenly,
+Alexei "Hey, catch!" 
   + catch
   U look at it closer
 ~Alexei = Alexei + 1
@@ -33,7 +34,7 @@ Suddenly, Alexei "Hey, catch!"
 It turned out to be an apple that he had picked from the nearest tree.It had just ripened and was slightly sour but delicious.
 Overall, I liked Alexei more than the other boys. The others often whined and cried, immediately running to complain to adults. 
 But Alexei wasn't afraid of getting into trouble. How many times were we left without dinner, but we were happy anyway.
-And we are, the most active ones, were assigned to go to the forest to pick mushrooms so that we wouldn't get in the way.
+And we are, as a puneshment, were assigned to go to the forest to pick mushrooms so that we wouldn't get in the way.
 * Go to the forest.
 ->ForestMushroom
 == ForestMushroom ==
@@ -50,7 +51,7 @@ Alexei knew i was joking but looked around just in case.
 Vladimir smiled" Hah do u really think i would be scared of puppies.
 ->RunningAway
  *No, if they were here, they would have already eaten someone as loud as you,
-Vladimir" No, They probably noticed your horrible smell and run away.
+Vladimir " No, They probably noticed your horrible smell and run away.
 ~Alexei = Alexei + 1
   **Show a tongue.
 ->RunningAway
@@ -60,15 +61,15 @@ Vladimir" No, They probably noticed your horrible smell and run away.
 
 ==RunningAway
 Alexei "Well, this place is so boring that doesnt even have wolfs, what about running away from here and going to the bigger village or even city? 
-Im sure the life is going to be more interesting there than here just wandering between these three houses. 
+Alexei "Im sure the life is going to be more interesting there than here just wandering between these three houses. 
 Alexei "I dream of becoming a blacksmith,and here we dont have anyone to teach me. Only old farmers left here.This ploace is dying.
-  *We can try in a couple of years? 
+  *Victor "We can try in a couple of years? 
   Victor "When we grow up.
 ->NotTryRunAway
-  *what's the point? 
+  *Victor "what's the point? 
 They won't even hire us to clean the barn, and you're talking about actual job.
 ->NotTryRunAway
-  *Yee lets do it tomorrow.
+  *Victor "Yee lets do it tomorrow.
   Vladimir" I dont know about tommorow, i promised one grandma to help her to find her dog this week.
 ->TryRunAway
 
