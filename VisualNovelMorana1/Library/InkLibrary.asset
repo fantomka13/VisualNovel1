@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc234ab28a32840f5adfb84a075bc023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkLibrary:
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 3aa205187a55208448551cd5ad52cd39, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 5f57907d896863f438cfd9379261e4d4, type: 3}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 1460e815e969b43b8a83a7caa8b48c27, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 60e1c00f4248a2d43b1fd0f57cafd03d, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: d18ca690ddb259e4d98c49ae52cfec57, type: 3}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 9c0a16a598a61c149993c872b03128a8, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: 0d15f87462d0fb44b952e27ebf976437, type: 3}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 5cb06863009ddfa4abb82b690e543bb7, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 4900000, guid: c3328f7d7226c494193ed6186b3dd2d7, type: 3}
+    unhandledCompileErrors: []
+    errors: []
+    warnings: []
+    todos: []
+    parents: []
+    masterInkAssets: []
+    masterInkAsset: {fileID: 0}
+    includePaths: []
+    includes: []
