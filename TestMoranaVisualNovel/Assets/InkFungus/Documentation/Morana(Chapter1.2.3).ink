@@ -10,6 +10,7 @@ VAR Alexei = 0
 VAR AlexeiLife = true
 VAR Light = 0
 VAR Maze = 0
+
 //Chapter 1.1 (introduction)
 #backgroundfield1
 
@@ -19,7 +20,7 @@ VAR Maze = 0
 This happened five years before the main event. 
 Back then, I couldn't imagine what is going to happen to me and the terrible truth about myself that I would have to uncover, the choices I would have to make.
 It all started in a small shelter where many children ended up being because they lost their parents during the war.
-That morning turned out to be surprisingly good. We were eating our favorite food-potatos,when we started playing with it and got keaked out to stay outside.
+This morning turned out to be surprisingly good. We were eating our favorite food-potatos,when we started playing with it and got keaked out to stay outside.
 Suddenly,
 Alexei "Hey, catch!" 
   + catch
@@ -33,8 +34,8 @@ Alexei "Hey, catch!"
 ==  Apple ==
 It turned out to be an apple that he had picked from the nearest tree.It had just ripened and was slightly sour but delicious.
 Overall, I liked Alexei more than the other boys. The others often whined and cried, immediately running to complain to adults. 
-But Alexei wasn't afraid of getting into trouble. How many times were we left without dinner, but we were happy anyway.
-And we are, as a puneshment, were assigned to go to the forest to pick mushrooms so that we wouldn't get in the way.
+But Alexei wasn't afraid of getting into trouble. How many times we were left without dinner, but we were happy anyway.
+And as a puneshment we were assigned to go to the forest to pick mushrooms so that we wouldn't get in the way.
 * Go to the forest.
 ->ForestMushroom
 == ForestMushroom ==
@@ -51,7 +52,7 @@ Alexei knew i was joking but looked around just in case.
 Vladimir smiled" Hah do u really think i would be scared of puppies.
 ->RunningAway
  *No, if they were here, they would have already eaten someone as loud as you,
-Vladimir " No, They probably noticed your horrible smell and run away.
+Alexei "No, They probably noticed your horrible smell and run away.
 ~Alexei = Alexei + 1
   **Show a tongue.
 ->RunningAway
@@ -70,7 +71,7 @@ Alexei "I dream of becoming a blacksmith,and here we dont have anyone to teach m
 They won't even hire us to clean the barn, and you're talking about actual job.
 ->NotTryRunAway
   *Victor "Yee lets do it tomorrow.
-  Vladimir" I dont know about tommorow, i promised one grandma to help her to find her dog this week.
+  Alexei "I dont know about tommorow, i promised one grandma to help her to find her dog this week.
 ->TryRunAway
 
 ==TryRunAway
@@ -90,20 +91,22 @@ Alexei "Why are you so boring today.I just wanted to dream.
 === MushroomCollection ===
 So, after our pointless conversation, we arrived at the mushroom clearing.
 
+->ContinueCave
 
+==ContinueCave
 While I was collecting mushrooms, I heard Alexeys scream.
 I started to worry about him getting into troubles.
 *Run to check on him.
 ->CaveEntrance
-Snee
-
+*Steal up
+->CaveEntrance
 
 //Chapter1.2 (Cave)
 === CaveEntrance ===
-
+#caveappears
 It turned out to be a scream of joy.
-He was standing in front of the entrance to a cave, which wasn't so easy to notice behind the bushes. It was the first time I saw it, although we had walked here several times
-before. Although, perhaps we just passed by without paying attention. In any case, it was clear from Alexei's face that he was going to enter it.
+He was standing in front of the entrance to a cave, which wasn't so easy to notice behind the bushes. It was the first time I saw it, although we had walked here several times before.
+Perhaps we just passed by without paying attention. In any case, it was clear from Alexei's face that he was going to enter it.
 Alexei "Well, are you ready for an adventure?
 + Yes,of course.
 "Whoever is last has to clean the room!" I shouted, and I was the first to enter the cave.
@@ -134,10 +137,10 @@ The light hypnotized me, i couldnt take away my eyes from it
 
 //Maze game starts
 ==CaveMaze==
-I stared at it and didn't notice that Vladimir wasn't next to me anymore.
+I stared at it and didn't notice that Alexei wasn't next to me anymore.
 ->ShoutAlexei
 =ShoutAlexei
-  + Shout for Vladimir.
+  * Shout for Alexei.
   After the fourth shout, my voice became hoarse, and I couldn't do it anymore.
 ->ShoutAlexei
   + Go to look for him.
@@ -150,7 +153,7 @@ Choosing a way to go
 ==Maze1
 #caveturn1
 ~ Maze=Maze+1
-{ Maze <10:
+{ Maze <100:
 Look around
 +Turning left
 ->Maze3
@@ -165,7 +168,7 @@ Look around
 ==Maze2
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <10:
+{ Maze <100:
 Look around
 +Turning left
 ->Maze1
