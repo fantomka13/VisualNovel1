@@ -150,7 +150,7 @@ Choosing a way to go
 #caveturn1
 ~ Maze=Maze+1
 { Maze <10:
-Maze1
+Look around
 +Turning left
 ->Maze3
 +Turning right
@@ -165,7 +165,7 @@ Maze1
 #caveturn2
 ~ Maze=Maze+1
 { Maze <10:
-Maze2
+Look around
 +Turning left
 ->Maze1
 +Climb down
@@ -181,7 +181,7 @@ There is the hole in yhe floor im turning Back
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze3
+Look around
 +Climb up
 ->Maze16
 +Going right
@@ -192,7 +192,7 @@ Maze3
 	}
 ==Maze4
 #caveturn1
-Maze4
+Look around
 ~ Maze=Maze+1
 { Maze <100:
 +Turning left
@@ -211,7 +211,7 @@ Maze4
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze5
+Look around
 +Turning left
 ->Maze4
 +climb up
@@ -224,7 +224,7 @@ Maze5
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze6
+Look around
 +Turning left
 ->Maze7
 +Climb down
@@ -237,7 +237,7 @@ Maze6
 #caveturn1
 ~ Maze=Maze+1
 { Maze <100:
-Maze7
+Look around
 +Turning right
 ->Maze6
 +Climb up
@@ -250,7 +250,7 @@ Maze7
 #caveturn1
 ~ Maze=Maze+1
 { Maze <100:
-Maze8
+Look around
 +climb up
 ->Maze12
 +climb down
@@ -265,7 +265,7 @@ Maze8
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze9
+Look around
 +Turning right
 ->Maze8
 +climb up
@@ -282,7 +282,7 @@ Maze9
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze10
+Look around
 +Turning right
 ->Maze9
 +Climb down
@@ -295,7 +295,7 @@ Maze10
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze11
+Look around
 +Turning left
 ->Maze13
 +Turning right
@@ -315,7 +315,7 @@ Maze11
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze13
+Look around
 +Turning right
 ->Maze11
 +climb up
@@ -330,7 +330,7 @@ Maze13
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze14
+Look around
 +Turning left
 There is the wall im coming back
 ->Maze14
@@ -346,7 +346,7 @@ There is the wall im coming back
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze15
+Look around
 +Turning left
 ->Maze14
 +Climb down
@@ -361,7 +361,7 @@ Maze15
 #caveturn2
 ~ Maze=Maze+1
 { Maze <100:
-Maze16
+Look around
 +Turning left
 ->Maze16
 +Turning right
