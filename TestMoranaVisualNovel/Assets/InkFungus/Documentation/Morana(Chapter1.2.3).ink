@@ -564,6 +564,8 @@ Suddenly voice from nowhere whispered.
 Voice "I was expecting you much later.
 ->FirstQuestionVoice
 ==FirstQuestionVoice
+{
+- VoiceQuestions <=1:
 *Who are you?
 Voice "I am the night itself but dont think too much into it.One day we are going to meet in person.
 ~VoiceQuestions = VoiceQuestions + 1
@@ -572,13 +574,13 @@ Voice "I am the night itself but dont think too much into it.One day we are goin
 You are between two dimentions. Your simple human mind can not process it anyway
 ~VoiceQuestions = VoiceQuestions + 1
 ->FirstQuestionVoice
-{ 
--FirstQuestionVoice == 2 :
+
+ -else:
 *Did i died?
 Voice "Unfortunately yes, that idiot didnt listen to my warnings. For him better not show up in front of me for the next 100 years.
 Voice "Anyway, I do not allow you to die yet.
 Voice "COME BACK TO YOUR BODY!
-I started to feel gravity again and slowely all my feelings come back. But with them also realisation that i will never see Alexei again.
+I started to feel gravity again and slowely all my feelings come back. But with them, also realisation that i will never see Alexei again.
 #backgroundforestmashroom
 I run as quick as i could to tell adults about it.
 But when we come back the cave was gone like it never existed. Everyone assumed that Alexei just run away and i created a fantasy story. 
@@ -586,6 +588,7 @@ A few yaers later i started to think like this too. I just assumed it was all my
     -> END
     }
     
+    ->DONE
     
     
     
