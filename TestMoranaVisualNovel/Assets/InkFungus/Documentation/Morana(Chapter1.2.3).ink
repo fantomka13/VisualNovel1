@@ -18,17 +18,17 @@ VAR Maze = 0
 VAR Mushroom = 0
 VAR VoiceQuestions = 0
 VAR MonsterQuestions = 0
-
+VAR MonsterCave = 0
 
 //Chapter 1.1 (introduction)
 #backgroundfield1
 
-->VictorDied1
+->MazeExit
 === Chapter1 ===
 #introductionmusic
 This happened five years before the main event. 
 Back then, I couldn't imagine what is going to happen to me and the terrible truth about myself that I would have to uncover, the choices I would have to make.
-It all started in a small shelter. After the war many children ended up being left alone so places like this was build.
+It all started in a small shelter. After the war many children ended up being left alone, so places like this was build.
 This morning turned out to be surprisingly good. We were eating our favorite food-potatos,then we started playing with it and got keaked out of the dining room to stay outside.
 Suddenly,
 Alexei "Hey, catch!" 
@@ -80,6 +80,7 @@ Alexei "I dream of becoming a blacksmith,and here we dont have anyone to teach m
 They won't even hire us to clean the barn, and you're talking about actual job.
 ->NotTryRunAway
   *Victor "Yee lets do it tomorrow.
+  ~Alexei = Alexei + 1
   Alexei "I dont know about tommorow, i promised one grandma to help her to find her dog this week.
 ->TryRunAway
 
@@ -107,6 +108,7 @@ Collect mushrooms.
 While I was collecting mushrooms, I heard Alexeys scream.
 I started to worry about him getting into troubles.
 *Run to check on him.
+~Alexei = Alexei + 1
 ->CaveEntrance
 *Steal up
 ->CaveEntrance
@@ -401,17 +403,24 @@ Continuing on my path,I finaly heard something.
 #musiccavemonster
 I heard a menacing hiss, and in front of me unfolded a horrifying scene. At that moment, I regretted that agreed to the idea to come here.
 I intended to run back instantly, before the creature noticed me.
+#monsterspawn
 *Stand still
 I was too scared to even move my finger.The creature turned his head towords me.
 Creature "DO NOT MOVE!
 The creature put his clowes on Alexeys neck
 ->SaveAlexei
 *Run away
+~Alexei = Alexei - 1
 I tried to turn around but the moment i moved the creature shouted at me.
 Creature "Dont move or i would rippe YOU apart
 ->SaveAlexei
 *Help Alexei.
-I couldnt stay and watch how my friend dying so I used all my strength and hit the monster with a stone which i found. It helped for a second but the creature jumped on me, moving his teeth to my neck.
+~Fight_Skill = Fight_Skill + 1
+~VictorHuman = VictorHuman + 1
+~Alexei = Alexei + 1
+I couldnt stay and watch how my friend dying so I used all my strength and hit the monster with a stone which i found.
+#monsterspawn
+It helped for a second but the creature jumped on me, moving his teeth to my neck.
 ->SecondAttempHelp
 
 ==SaveAlexei
@@ -422,25 +431,31 @@ The monster was getting his mouth closer and closer to Alexei, he couldnt hold h
 He started eating him slowly
 ->SecondAttempWatch
 *Attempt to help.
+~Fight_Skill = Fight_Skill + 1
+~VictorHuman = VictorHuman + 1
 Putting all my fear away i started running towards monster but he easily pushed me away. I flew into the wall. When i was no longer a hindrance for him, the creature continued killing my friend. 
 I started crying because i didnt know what to do.
 ->SecondAttempWatch
 *Run
 I started running as fast as i could but the creature noticed me immediately and attacked.
 He was pushing me to the ground i could feel how his clowes goes deeper into my body.
+#monsterspawn
 ->SecondAttempHelp
 =SecondAttempWatch
  *Stand and watch
 Alexei stopted screaming. Because of the blood i couldnt see his face.
 ->ThirdAttempWatch
  *Run
+ ~Alexei = Alexei - 1
  ->SecondAttempRun
   
   =ThirdAttempWatch
+  ~AlexeiLife = false
    *Stand and watch
 The creature finished eating and came closer
+#monsterspawn
 Creature "Good boy. Now i will show you the exit. Next time when you come here dont forget to bring your friends.
-Victor "Why u didnt kill me?
+Victor "You dont want to kill me?
 Creature laughed
 Creature "Hah so you dont know,then its not my job to tell u but one day u will understand 
 Creature "Now i am going to bring you to the exit.
@@ -448,13 +463,16 @@ Creature "Now i am going to bring you to the exit.
 
    *Run
 I tried to run but it was alredy too late. Monster already finished with Alexei and jumped on top of me bringing his claws.
+#monsterspawn
 Creature "Stupid boy what did i tald you.
 
    **Start crying
 Creature looked at me with disgust and stabed.
 I fell into darkness.
+#monsterdestroy
 ->VictorDied1
    ** Try to fight
+   ~Fight_Skill = Fight_Skill + 1
 I tried to hit him with a stoun in my hand but it didnt work. He just lought at my face.
 Creature" For now i will forgive you as you are just a child but if we meet at the future leasten to me or would end up on the another side.
 Now im goimg to show you the exit.
@@ -465,7 +483,7 @@ I started running as fast as i could while the creature was busy eating my frien
 ->ExitingCave
 
 //Victor and Alexei fighting together or not.
-==SecondAttempHelp
+=== SecondAttempHelp ===
 { 
 -Alexei <=0:
 ->DmitriyNotHelp
@@ -476,7 +494,9 @@ I started running as fast as i could while the creature was busy eating my frien
 
 ==DmitriyHelp
 I was ready to die 
-When suddenly i saw how dmitriy try to attack monster from behind.
+When suddenly i saw how dmitriy try to attack monster from behind. He distructed hom enough. I wanted to help him.
+Alexei "Run and ask for help,dont worry about me.
+And i started running towards the exit leaving my friend alone.
 ->ExitingCave
 
 ==DmitriyNotHelp
@@ -495,14 +515,16 @@ Creature "I was just playing with him of course i wouldnt touch your boy. Im goi
 *I dont care.
 Creature "If you say so...
 Everything suddenly become dark
+#monsterdestroy
 ->VictorDied1
 
 ->ExitingCave
 
 === ExitingCave ===
 //Ending 1 exiting the cave alone
-#caveturn1
-I finally manged to exit even though i had no strength to run i still forced myself to go forward to find someone to help there was still hope that Alexei was alive.
+#sadmusic1
+#backgroundforestmashroom
+I finally manged to escape even though i had no strength to move i still forced myself to go forward to find someone to help there was still hope that Alexei was alive.
 But when we returned the cave was gone as it have never been here.
 I sat down on my knees and started crying
 imagining how Alexei felt when his best friend abandoned him in such situation.
@@ -511,6 +533,7 @@ imagining how Alexei felt when his best friend abandoned him in such situation.
 
 // Ending 2 exiting the cave with monster
 ==ExitingCaveMonster
+#sadmusic1
 #caveturn2
 As he led me to the exit, my legs kept shaking.
 But the creature looked like he really didnt want to hurt me. He acted like nothing happened like he didnt just killed my friend in front of me.
@@ -521,28 +544,32 @@ Creature "Yes but only one.
 {
 - MonsterQuestions <=1:
 *Is there more monsters like your?
+~Knoweledge = Knoweledge + 1
 Creature "Ohh yes, there is a lot different leaving or dead creature which u cant even imagine so be careful around and look at the shadows. Sometimes they can tell you a lot about a person in front of u.
 ~MonsterQuestions = MonsterQuestions + 1
 ->AskMonsterQuestion
 
 *Did you knew my parents?
-Victor "You sound like you know something about me, may be you know something about my famaly too.
+Victor "You sound like you know something about me, may be you know something about my family too.
 ~MonsterQuestions = MonsterQuestions + 1
 ->AskMonsterQuestion
 
   -else:
 *Why did you killed my friend?
-I guess you eqat meet or chiken sometimes and i get hungry too. I want to live but it just happened that my diet is different from yours. One day u will understand.
+~Knoweledge = Knoweledge + 1
+I guess you eat meet or chiken sometimes and i get hungry too. I want to live but it just happened that my diet is different from yours. One day u will understand.
 **I understand
+~VictorMonster = VictorMonster + 1
 Creature "I knew you are a smart boy. Good that i actualy didnt eat you.
 Victor "I understand you but not forgive you. Whenb i grow up i will kill you.
 Creature "Ahahha, im going to wait for that moment but u need to survive until that day first.
 ->ExitCaveMonster
 **I will never understand.
+~VictorHuman = VictorHuman + 1
 Victor "He was my best friend and he was a Human. You had a choice. You could have eaten an animal but...
 Victor "I will never forgive you that.When I will be alder i will come back and kill you.
 Creature "Ahahah, i dont think you will be alive by that point.
-
+#monsterdestroy
 
 ->ExitCaveMonster
 }
@@ -577,6 +604,7 @@ You are between two dimentions. Your simple human mind can not process it anyway
 
  -else:
 *Did i died?
+~Knoweledge = Knoweledge + 1
 Voice "Unfortunately yes, that idiot didnt listen to my warnings. For him better not show up in front of me for the next 100 years.
 Voice "Anyway, I do not allow you to die yet.
 Voice "COME BACK TO YOUR BODY!
