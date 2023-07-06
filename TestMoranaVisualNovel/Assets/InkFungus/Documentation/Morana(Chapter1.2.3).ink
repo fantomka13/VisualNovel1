@@ -16,20 +16,20 @@ VAR AlexeiLife = true
 VAR Light = 0
 VAR Maze = 0
 VAR Mushroom = 0
-VAR VoiceQuestions=0
-VAR MonsterQuestions=0
+VAR VoiceQuestions = 0
+VAR MonsterQuestions = 0
 
 
 //Chapter 1.1 (introduction)
 #backgroundfield1
 
-->MazeExit
+->VictorDied1
 === Chapter1 ===
 #introductionmusic
 This happened five years before the main event. 
 Back then, I couldn't imagine what is going to happen to me and the terrible truth about myself that I would have to uncover, the choices I would have to make.
-It all started in a small shelter where many children ended up being because they lost their parents during the war.
-This morning turned out to be surprisingly good. We were eating our favorite food-potatos,when we started playing with it and got keaked out to stay outside.
+It all started in a small shelter. After the war many children ended up being left alone so places like this was build.
+This morning turned out to be surprisingly good. We were eating our favorite food-potatos,then we started playing with it and got keaked out of the dining room to stay outside.
 Suddenly,
 Alexei "Hey, catch!" 
   + catch
@@ -44,7 +44,7 @@ Alexei "Hey, catch!"
 It turned out to be an apple that he had picked from the nearest tree.It had just ripened and was slightly sour but delicious.
 Overall, I liked Alexei more than the other boys. The others often whined and cried, immediately running to complain to adults. 
 But Alexei wasn't afraid of getting into trouble. How many times we were left without dinner, but we were happy anyway.
-And as a puneshment we were assigned to go to the forest to pick mushrooms so that we wouldn't get in the way.
+And as a puneshment we were assigned to go to the forest to pick mushrooms so that we wouldn't get in the way working people.
 * Go to the forest.
 ->ForestMushroom
 == ForestMushroom ==
@@ -52,7 +52,7 @@ And as a puneshment we were assigned to go to the forest to pick mushrooms so th
 #forestnoice
 I don't know why but the forest is truly an amazing place; I would say it feels like... 
 home.
-Alexei "Viktor, do you think there are wolves here?
+Alexei "Viktor, do you think any wolfs live here?
 *Of course, there are wolves here
 Alexei knew i was joking but looked around just in case.
 ->RunningAway
@@ -71,7 +71,7 @@ Alexei "No, They probably noticed your horrible smell and run away.
 
 ==RunningAway
 Alexei "Well, this place is so boring that doesnt even have wolfs, what about running away from here and going to the bigger village or even city? 
-Alexei "Im sure the life is going to be more interesting there than here just wandering between these three houses. 
+Alexei "Im sure the life is going to be more interesting there then at the goden forgotten place where we can only wandering between these three houses. 
 Alexei "I dream of becoming a blacksmith,and here we dont have anyone to teach me. Only old farmers left here.This ploace is dying.
   *Victor "We can try in a couple of years? 
   Victor "When we grow up.
@@ -99,6 +99,7 @@ Alexei "Why are you so boring today.I just wanted to dream.
 //Create a mini game for collecting mashrooms
 === MushroomCollection ===
 So, after our pointless conversation, we arrived at the mushroom clearing.
+Collect mushrooms.
 *@collect
 ->ContinueCave
 
@@ -118,7 +119,7 @@ He was standing in front of the entrance to a cave, which wasn't so easy to noti
 Perhaps we just passed by without paying attention. In any case, it was clear from Alexei's face that he was going to enter it.
 Alexei "Well, are you ready for an adventure?
 + Yes,of course.
-"Whoever is last has to clean the room!" I shouted, and I was the first to enter the cave.
+"Try to cath up with me!" I shouted, and  was the first one to enter the cave.
 ->InsideCave
 Alexei ran after me
 + May be its better to go there another time.
@@ -129,10 +130,12 @@ Alexei "What if no one has been in this cave before us and take all the treasure
 ==InsideCave==
 #backgroundcaveentrance
 #musiccaveadventure
-The two of us entered the cave. Inside, it was magical, covered in moss and other plants I didn't know.
+The two of us entered the cave. Inside, it was magical, the walls covered in moss and other plants I didn't know existed.
 But the further we went, the less light penetrated until we found ourselves in complete darkness.
 Holding onto the wall, we continued moving forward, listening to each other's footsteps and trying not to get lost.
 Suddenly, a flickering light appeared in the distance.
+
+//Game to try to get the light.
 ->LightCave
 =LightCave
 +Look at the light
@@ -155,14 +158,14 @@ I stared at it and didn't notice that Alexei wasn't next to me anymore.
   + Go to look for him.
 ->InsideMaze
 =InsideMaze
-I was walking for a while until noticed fork in the road.I knew i coulod get lost but the idea of not finding Alexei terrified me.
-Choosing a way to go
+I was walking for a while until noticed fork in the road.I knew i could get lost but the idea of not finding Alexei terrified me.
 ->Maze1
 
 ==Maze1
 #caveturn1
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +Turning left
 ->Maze3
@@ -175,9 +178,10 @@ Look around
 		-> MazeExit
 	}
 ==Maze2
-#caveturn2
+#caveturn1
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +Turning left
 ->Maze1
@@ -193,21 +197,18 @@ There is the hole in yhe floor im turning Back
 ==Maze3
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
 Look around
 +Climb up
 ->Maze16
 +Going right
 ->Maze1
-	- else:
-	     
-		-> MazeExit
-	}
+
 ==Maze4
 #caveturn1
 Look around
 ~ Maze=Maze+1
-{ Maze <13:
+{
+-Maze <9:
 +Turning left
 ->Maze16
 +Turning right
@@ -223,33 +224,26 @@ Look around
 ==Maze5
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
 Look around
 +Turning left
 ->Maze4
 +climb up
 ->Maze6
-	- else:
-	     
-		-> MazeExit
-	}
+
 ==Maze6
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
 Look around
 +Turning left
 ->Maze7
 +Climb down
 ->Maze5
-	- else:
-	     
-		-> MazeExit
-	}
+
 ==Maze7
 #caveturn1
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +Turning right
 ->Maze6
@@ -262,7 +256,8 @@ Look around
 ==Maze8
 #caveturn1
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +climb up
 ->Maze12
@@ -277,7 +272,6 @@ Look around
 ==Maze9
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
 Look around
 +Turning right
 ->Maze8
@@ -287,14 +281,12 @@ Look around
 ->Maze10
 +Climb down
 ->Maze4
-	- else:
-	     
-		-> MazeExit
-	}
+
 ==Maze10
-#caveturn2
+#caveturn1
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +Turning right
 ->Maze9
@@ -307,16 +299,12 @@ Look around
 ==Maze11
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
 Look around
 +Turning left
 ->Maze13
 +Turning right
 ->Maze12
-	- else:
-	     
-		-> MazeExit
-	}
+
 ==Maze12
 #caveturn1
 
@@ -327,7 +315,8 @@ Look around
 ==Maze13
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
+{
+-Maze <9:
 Look around
 +Turning right
 ->Maze11
@@ -342,7 +331,8 @@ Look around
 ==Maze14
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +Turning left
 There is the wall im coming back
@@ -358,7 +348,8 @@ There is the wall im coming back
 ==Maze15
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
+{ 
+-Maze <9:
 Look around
 +Turning left
 ->Maze14
@@ -373,7 +364,6 @@ Look around
 ==Maze16
 #caveturn2
 ~ Maze=Maze+1
-{ Maze <13:
 Look around
 +Turning left
 ->Maze16
@@ -381,10 +371,7 @@ Look around
 ->Maze4
 +Climb up
 ->MazeSecretRoom
-	- else:
-	     
-		-> MazeExit
-	}
+
 
 ==MazeSecretRoom
 The walls had a scratched map of the cave; surely someone had managed to escape from here.
@@ -395,7 +382,8 @@ The walls had a scratched map of the cave; surely someone had managed to escape 
 *Examine the bones
 The bones were new and probably belonged to dog. It meant that any predator left this place not a long time ago.
 ~ Maze=Maze+1
-{ Maze <10:
+{ 
+-Maze <10:
 +Turning right
 ->Maze10
 +Climb down
@@ -411,48 +399,52 @@ The bones were new and probably belonged to dog. It meant that any predator left
 Continuing on my path,I finaly heard something.
 #cavemazeroom
 #musiccavemonster
-I heard a menacing hiss, and before me unfolded a horrifying scene. At that moment, I regretted that agreed to vladimirs idea to come here.
-I intended to run back instantly, but the creature standing ahead noticed me and started approaching.
+I heard a menacing hiss, and in front of me unfolded a horrifying scene. At that moment, I regretted that agreed to the idea to come here.
+I intended to run back instantly, before the creature noticed me.
 *Stand still
 I was too scared to even move my finger.The creature turned his head towords me.
-Creature"DO NOT MOVE!
-The creature nput his clowes on Vladimirs neck
+Creature "DO NOT MOVE!
+The creature put his clowes on Alexeys neck
 ->SaveAlexei
 *Run away
 I tried to turn around but the moment i moved the creature shouted at me.
-Dont move or i would rippe YOU apart
+Creature "Dont move or i would rippe YOU apart
 ->SaveAlexei
+*Help Alexei.
+I couldnt stay and watch how my friend dying so I used all my strength and hit the monster with a stone which i found. It helped for a second but the creature jumped on me, moving his teeth to my neck.
+->SecondAttempHelp
 
 ==SaveAlexei
-The creature was getting his mouth closer and closer to Alexei 
-he could hold himself anymore and started screaming.
+The monster was getting his mouth closer and closer to Alexei, he couldnt hold himself anymore and started screaming.
 ->FirstAttempWatch
 =FirstAttempWatch
 *Stand and watch.
 He started eating him slowly
 ->SecondAttempWatch
 *Attempt to help.
-Putting all my fear away i started running towards monster but he easily pushed me away. I flew into the wall. When i was no longer a hindrance for him creature cintinued killinging my friend. 
+Putting all my fear away i started running towards monster but he easily pushed me away. I flew into the wall. When i was no longer a hindrance for him, the creature continued killing my friend. 
 I started crying because i didnt know what to do.
-->SecondAttempHelp
+->SecondAttempWatch
 *Run
-I started runniing as fast as i could but the creature noticed me immediately and attacked.
-He was pushing me to the ground i could feel how his clowes goes deeper into mu body.
-->SecondAttempRun
+I started running as fast as i could but the creature noticed me immediately and attacked.
+He was pushing me to the ground i could feel how his clowes goes deeper into my body.
+->SecondAttempHelp
 =SecondAttempWatch
  *Stand and watch
-Alexei stopted screaming. Because of all blood i couldnt see his face.
+Alexei stopted screaming. Because of the blood i couldnt see his face.
 ->ThirdAttempWatch
- 
+ *Run
+ ->SecondAttempRun
   
   =ThirdAttempWatch
-   *Stand and watched
+   *Stand and watch
 The creature finished eating and came closer
-Good boy. Now i will show you the exit. Next time when u will come here dont forget to bring your friends.
-Victor "Why u didnt kill me.
+Creature "Good boy. Now i will show you the exit. Next time when you come here dont forget to bring your friends.
+Victor "Why u didnt kill me?
 Creature laughed
-Creature"Hah so you dont know,then its not my job to tell u but one day u will understand 
-->ExitingCave
+Creature "Hah so you dont know,then its not my job to tell u but one day u will understand 
+Creature "Now i am going to bring you to the exit.
+->ExitingCaveMonster
 
    *Run
 I tried to run but it was alredy too late. Monster already finished with Alexei and jumped on top of me bringing his claws.
@@ -461,7 +453,7 @@ Creature "Stupid boy what did i tald you.
    **Start crying
 Creature looked at me with disgust and stabed.
 I fell into darkness.
-->VictorDied
+->VictorDied1
    ** Try to fight
 I tried to hit him with a stoun in my hand but it didnt work. He just lought at my face.
 Creature" For now i will forgive you as you are just a child but if we meet at the future leasten to me or would end up on the another side.
@@ -473,8 +465,9 @@ I started running as fast as i could while the creature was busy eating my frien
 ->ExitingCave
 
 //Victor and Alexei fighting together or not.
-=SecondAttempHelp
-{ Alexei <=0:
+==SecondAttempHelp
+{ 
+-Alexei <=0:
 ->DmitriyNotHelp
 	- else:
 	     
@@ -488,17 +481,27 @@ When suddenly i saw how dmitriy try to attack monster from behind.
 
 ==DmitriyNotHelp
 I was looking around in hope that Alexei is going to save me but he disappeared. He left me alone with this creature.May be i deserve it. Monster was looking at me and loughed.
-Creature "You human beings so interesting.You come here to save your friend but anded up the one dying here.
+Creature "You human beings are so interesting.You come here to save your friend but ended up the one dying here.
 Victor "It doesnt metter at least Alexei will survive.
-Creature "Not for long time onece i finish with you, I am planning to find him. No one can escape or enter this place without my permission.
-Creature "So what should i so with you, little boy?
+Creature "Not for long time once i finish with you, I am planning to find him. No one can escape or enter this place without my permission.
+Creature "So what should I do whith you, little boy?
+*Please do not kill me.
+Creature "You look so pathetic, may be i should disobey and kill you
+Suddenly a voice whispered in the air.
+Voice "Do it and the next 100 years you would spend whithout going outside.
+Creature "I was just playing with him of course i wouldnt touch your boy. Im going to bring him to the exit.
+->ExitCaveMonster
 
-
+*I dont care.
+Creature "If you say so...
+Everything suddenly become dark
+->VictorDied1
 
 ->ExitingCave
 
 === ExitingCave ===
 //Ending 1 exiting the cave alone
+#caveturn1
 I finally manged to exit even though i had no strength to run i still forced myself to go forward to find someone to help there was still hope that Alexei was alive.
 But when we returned the cave was gone as it have never been here.
 I sat down on my knees and started crying
@@ -508,23 +511,26 @@ imagining how Alexei felt when his best friend abandoned him in such situation.
 
 // Ending 2 exiting the cave with monster
 ==ExitingCaveMonster
+#caveturn2
 As he led me to the exit, my legs kept shaking.
-But the creature looked like he really didnt want to heart me. He cated like he didnt just killed my friend.
-*Can i ask u one question.
+But the creature looked like he really didnt want to hurt me. He acted like nothing happened like he didnt just killed my friend in front of me.
+*Can i ask you one question?
 Creature "Yes but only one.
 -> AskMonsterQuestion
 == AskMonsterQuestion
+{
+- MonsterQuestions <=1:
 *Is there more monsters like your?
 Creature "Ohh yes, there is a lot different leaving or dead creature which u cant even imagine so be careful around and look at the shadows. Sometimes they can tell you a lot about a person in front of u.
 ~MonsterQuestions = MonsterQuestions + 1
 ->AskMonsterQuestion
 
 *Did you knew my parents?
-Victor "You sound like you know something about me may be you know something about my famaly too.
+Victor "You sound like you know something about me, may be you know something about my famaly too.
 ~MonsterQuestions = MonsterQuestions + 1
 ->AskMonsterQuestion
 
-{ MonsterQuestions ==2:
+  -else:
 *Why did you killed my friend?
 I guess you eqat meet or chiken sometimes and i get hungry too. I want to live but it just happened that my diet is different from yours. One day u will understand.
 **I understand
@@ -536,16 +542,21 @@ Creature "Ahahha, im going to wait for that moment but u need to survive until t
 Victor "He was my best friend and he was a Human. You had a choice. You could have eaten an animal but...
 Victor "I will never forgive you that.When I will be alder i will come back and kill you.
 Creature "Ahahah, i dont think you will be alive by that point.
+
+
 ->ExitCaveMonster
 }
-=ExitCaveMonster
+
+==ExitCaveMonster
+#backgroundforestmashroom
 Once I was outside i relized how tired i was and immediately fell asleep right on the ground.When i woke up there was no monster or cave. 
-I walked back to the shelter. Of course no one belived my story nad after a few years i toped belive in it too. Like it was a weird dream.
+I walked back to the shelter. Of course no one belived my story and after a few years i stoped belive in it too. Like it was a weird dream.
 
 ->END
 
 // Ending 3 where Victor dies.
-=== VictorDied ===
+
+=== VictorDied1 ===
 #musicdead
 #backgrounddead
 Everything become dark. I couldnt feel pain anymore jusr freedom of my soul. I have nothing to worry about but nothing to be happy too.
@@ -553,15 +564,16 @@ Suddenly voice from nowhere whispered.
 Voice "I was expecting you much later.
 ->FirstQuestionVoice
 ==FirstQuestionVoice
-*Who are you
+*Who are you?
 Voice "I am the night itself but dont think too much into it.One day we are going to meet in person.
 ~VoiceQuestions = VoiceQuestions + 1
 ->FirstQuestionVoice
-*Where am i.
+*Where am i?
 You are between two dimentions. Your simple human mind can not process it anyway
 ~VoiceQuestions = VoiceQuestions + 1
 ->FirstQuestionVoice
-{ FirstQuestionVoice ==2:
+{ 
+-FirstQuestionVoice == 2 :
 *Did i died?
 Voice "Unfortunately yes, that idiot didnt listen to my warnings. For him better not show up in front of me for the next 100 years.
 Voice "Anyway, I do not allow you to die yet.
