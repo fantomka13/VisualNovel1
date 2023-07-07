@@ -26,10 +26,10 @@ VAR MonsterQuestions = 0
 VAR MonsterCave = 0
 
 //Chapter2
+VAR OrphaneBadLoop = 0
+VAR Lookinletter = 0
 
-
-
-->Chapter2
+->Last_Preparation_Leaving
 
     
     

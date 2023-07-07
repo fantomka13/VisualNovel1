@@ -518,8 +518,8 @@ imagining how Alexei felt when his best friend abandoned him in such situation.
 #caveturn2
 As he led me to the exit, my legs kept shaking.
 But the creature looked like he really didnt want to hurt me. He acted like nothing happened like he didnt just killed my friend in front of me.
-*Can i ask you one question?
-Creature "Yes but only one.
+*Can i ask you a question?
+Creature "Yes but not too many.
 -> AskMonsterQuestion
 == AskMonsterQuestion
 {
@@ -594,6 +594,6 @@ I started to feel gravity again and slowely all my feelings come back. But with 
 I run as quick as i could to tell adults about it.
 But when we come back the cave was gone like it never existed. Everyone assumed that Alexei just run away and i created a fantasy story. 
 A few yaers later i started to think like this too. I just assumed it was all my dream.
-    -> Chapter2
+    -> DONE
     }
     

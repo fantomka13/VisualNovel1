@@ -3399,7 +3399,7 @@ Transform:
   m_GameObject: {fileID: 970942903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 2.632028, y: 2.632028, z: 2.632028}
+  m_LocalScale: {x: 2.8646994, y: 2.8646994, z: 2.8646994}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 419555782}
@@ -3769,10 +3769,10 @@ GameObject:
   - component: {fileID: 1158468028}
   - component: {fileID: 1158468032}
   - component: {fileID: 1158468033}
-  - component: {fileID: 1158468031}
   - component: {fileID: 1158468034}
   - component: {fileID: 1158468035}
   - component: {fileID: 1158468036}
+  - component: {fileID: 1158468037}
   m_Layer: 0
   m_Name: Flowchart Music
   m_TagString: Untagged
@@ -3865,8 +3865,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1158468019}
-  selectedCommands: []
+  - {fileID: 1158468032}
+  selectedCommands:
+  - {fileID: 1158468037}
   variables: []
   description: 
   stepPause: 0
@@ -4072,23 +4073,6 @@ MonoBehaviour:
   parentBlock: {fileID: 1158468029}
   suppressBlockAutoSelect: 0
   message: ink musiccavemonster
---- !u!114 &1158468031
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158468016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 831c208af3cccf24b80cc6f3768919bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 11
-  indentLevel: 0
-  soundClip: {fileID: 8300000, guid: 6adf99348e8cf984a84ef0efd714d3bf, type: 3}
-  volume: 1
-  loop: 1
 --- !u!114 &1158468032
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4114,7 +4098,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1158468033}
   commandList:
-  - {fileID: 1158468031}
+  - {fileID: 1158468037}
   suppressAllAutoSelections: 0
 --- !u!114 &1158468033
 MonoBehaviour:
@@ -4190,6 +4174,24 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 2e4942c76f6a30147bc5600153840fd7, type: 3}
   volume: 1
   loop: 1
+--- !u!114 &1158468037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158468016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1902400ccc99b45d69ad01cb86b57d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  musicClip: {fileID: 8300000, guid: 6adf99348e8cf984a84ef0efd714d3bf, type: 3}
+  atTime: 5
+  loop: 1
+  fadeDuration: 1
 --- !u!1 &1207965628
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,7 +5377,7 @@ Transform:
   m_GameObject: {fileID: 1443166641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 2.540309, y: 2.540309, z: 2.540309}
+  m_LocalScale: {x: 2.8995085, y: 2.8995085, z: 2.8995085}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1756974101}
@@ -5394,6 +5396,13 @@ GameObject:
   - component: {fileID: 1481507327}
   - component: {fileID: 1481507328}
   - component: {fileID: 1481507326}
+  - component: {fileID: 1481507331}
+  - component: {fileID: 1481507332}
+  - component: {fileID: 1481507333}
+  - component: {fileID: 1481507330}
+  - component: {fileID: 1481507335}
+  - component: {fileID: 1481507336}
+  - component: {fileID: 1481507337}
   m_Layer: 0
   m_Name: Visual effects
   m_TagString: Untagged
@@ -5414,11 +5423,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 78.294044, y: 59.8823}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5427,8 +5436,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1481507327}
-  selectedCommands:
-  - {fileID: 1481507326}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -5442,7 +5450,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &1481507326
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5471,9 +5479,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 492
-    y: 243
-    width: 86
+    x: 302
+    y: 121
+    width: 86.47058
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5486,7 +5494,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1481507328
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5514,6 +5522,181 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1481507330
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4998e756a5d84f4ab55e075dad751b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 970942903}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 0
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _offset:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 3, y: 3, z: 3}
+  offsetOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &1481507331
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 269
+    y: 228
+    width: 139.41174
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 2
+  blockName: Rotate bedroom
+  description: 
+  eventHandler: {fileID: 1481507333}
+  commandList:
+  - {fileID: 1481507330}
+  - {fileID: 1481507332}
+  suppressAllAutoSelections: 0
+--- !u!114 &1481507332
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dd111db90064d2cb85e3370cdfe3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  _targetObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 970942903}
+  _tweenName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 3
+  easeType: 2
+  loopType: 0
+  stopPreviousTweens: 0
+  waitUntilFinished: 0
+  targetObjectOLD: {fileID: 0}
+  tweenNameOLD: 
+  durationOLD: 0
+  _toTransform:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  _toRotation:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 180}
+  isLocal: 0
+  toTransformOLD: {fileID: 0}
+  toRotationOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &1481507333
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1481507331}
+  suppressBlockAutoSelect: 0
+  message: ink rotatebedroom
+--- !u!114 &1481507335
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 465
+    y: 356
+    width: 117.058815
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 5
+  blockName: Shake eyes
+  description: 
+  eventHandler: {fileID: 1481507336}
+  commandList:
+  - {fileID: 1481507337}
+  suppressAllAutoSelections: 0
+--- !u!114 &1481507336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1481507335}
+  suppressBlockAutoSelect: 0
+  message: ink shakehorroryeys
+--- !u!114 &1481507337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481507324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616cd37e21c7645c58a89edf5abee56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  duration: 2
+  amount: {x: 3, y: 3}
+  waitUntilFinished: 0
 --- !u!1 &1487224305
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,8 +8932,11 @@ GameObject:
   - component: {fileID: 1633214548}
   - component: {fileID: 1633214547}
   - component: {fileID: 1633214549}
+  - component: {fileID: 1633214552}
+  - component: {fileID: 1633214551}
+  - component: {fileID: 1633214550}
   m_Layer: 0
-  m_Name: Flowchart
+  m_Name: Flowchart view
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8785,8 +8971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 509.14633
-    y: -61.98874
+    x: 507.92682
+    y: -96.1351
     width: 96.34148
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8823,9 +9009,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1633214548}
-  selectedCommands:
-  - {fileID: 1633214549}
+  - {fileID: 1633214552}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -8909,8 +9094,8 @@ MonoBehaviour:
     y: 32.730076
     width: 85.36587
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0, g: 0.8745099, b: 0.95294124, a: 1}
+  useCustomTint: 1
   itemId: 4
   blockName: Forest
   description: 
@@ -8987,12 +9172,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 214.34361
-    y: 34.919373
+    x: 166.78261
+    y: 32.480347
     width: 76.82928
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0, g: 0.8588236, b: 0.93725497, a: 1}
+  useCustomTint: 1
   itemId: 6
   blockName: Field
   description: 
@@ -9039,8 +9224,8 @@ MonoBehaviour:
     y: 158.89511
     width: 150.00003
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0, g: 0.7254902, b: 0.78823537, a: 1}
+  useCustomTint: 1
   itemId: 10
   blockName: Cave Maze Room
   description: 
@@ -9121,8 +9306,8 @@ MonoBehaviour:
     y: 98.073685
     width: 200.00006
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0, g: 0.8745099, b: 0.95294124, a: 1}
+  useCustomTint: 1
   itemId: 12
   blockName: Backgroun Cave Entrance
   description: 
@@ -9338,12 +9523,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 316.8639
-    y: 38.132866
+    x: 260.7663
+    y: 33.254814
     width: 125.60979
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0, g: 0.8743326, b: 0.9528302, a: 1}
+  useCustomTint: 1
   itemId: 21
   blockName: caveappears
   description: 
@@ -9396,8 +9581,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 358.59567
-    y: 99.48369
+    x: 615.9119
+    y: -96.85788
     width: 85.36587
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9467,8 +9652,8 @@ MonoBehaviour:
     y: 99.18887
     width: 80.487816
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0, g: 0.8470589, b: 0.9215687, a: 1}
+  useCustomTint: 1
   itemId: 26
   blockName: Dead
   description: 
@@ -9520,12 +9705,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 58.059418
-    y: -70.72534
+    x: 47.0838
+    y: -85.3595
     width: 145.12198
     height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
+  tint: {r: 0.8196079, g: 0.72156864, b: 0.21960786, a: 1}
+  useCustomTint: 1
   itemId: 33
   blockName: Orphan Bedroom
   description: 
@@ -9535,7 +9720,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1633214549
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9558,6 +9743,73 @@ MonoBehaviour:
   orthoSizeTweenType: 4
   posTweenType: 4
   rotTweenType: 4
+--- !u!114 &1633214550
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633214507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437f9a4e3dbc647f9bdce95308418bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  duration: 0.2
+  fadeOut: 1
+  targetView: {fileID: 1756974100}
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  targetCamera: {fileID: 0}
+  fadeTweenType: 4
+  orthoSizeTweenType: 4
+  posTweenType: 4
+  rotTweenType: 4
+--- !u!114 &1633214551
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633214507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1633214552}
+  suppressBlockAutoSelect: 0
+  message: ink horroryeys
+--- !u!114 &1633214552
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633214507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 230.25226
+    y: -86.62035
+    width: 114.63417
+    height: 40
+  tint: {r: 0.8207547, g: 0.72110194, b: 0.2206746, a: 1}
+  useCustomTint: 1
+  itemId: 35
+  blockName: Horror eyes
+  description: 
+  eventHandler: {fileID: 1633214551}
+  commandList:
+  - {fileID: 1633214550}
+  suppressAllAutoSelections: 0
 --- !u!1 &1638321972
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,7 +9923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1481507325}
+  selectedFlowchart: {fileID: 1633214510}
 --- !u!4 &1645613730
 Transform:
   m_ObjectHideFlags: 1
