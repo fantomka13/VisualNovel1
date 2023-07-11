@@ -144,7 +144,7 @@ I was walking for a while until noticed fork in the road.I knew i could get lost
 ->Maze1
 
 ==Maze1
-#caveturn1
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -160,7 +160,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze2
-#caveturn1
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -177,7 +177,7 @@ There is the hole in yhe floor im turning Back
 		-> MazeExit
 	}
 ==Maze3
-#caveturn2
+
 ~ Maze=Maze+1
 Look around
 +Climb up
@@ -186,7 +186,7 @@ Look around
 ->Maze1
 
 ==Maze4
-#caveturn1
+
 Look around
 ~ Maze=Maze+1
 {
@@ -204,7 +204,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze5
-#caveturn2
+
 ~ Maze=Maze+1
 Look around
 +Turning left
@@ -213,7 +213,7 @@ Look around
 ->Maze6
 
 ==Maze6
-#caveturn2
+
 ~ Maze=Maze+1
 Look around
 +Turning left
@@ -222,7 +222,7 @@ Look around
 ->Maze5
 
 ==Maze7
-#caveturn1
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -236,7 +236,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze8
-#caveturn1
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -252,7 +252,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze9
-#caveturn2
+
 ~ Maze=Maze+1
 Look around
 +Turning right
@@ -265,7 +265,7 @@ Look around
 ->Maze4
 
 ==Maze10
-#caveturn1
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -279,7 +279,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze11
-#caveturn2
+
 ~ Maze=Maze+1
 Look around
 +Turning left
@@ -288,14 +288,14 @@ Look around
 ->Maze12
 
 ==Maze12
-#caveturn1
+
 
 
 	     
 -> MazeExit
 	
 ==Maze13
-#caveturn2
+
 ~ Maze=Maze+1
 {
 -Maze <9:
@@ -311,7 +311,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze14
-#caveturn2
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -328,7 +328,7 @@ There is the wall im coming back
 		-> MazeExit
 	}
 ==Maze15
-#caveturn2
+
 ~ Maze=Maze+1
 { 
 -Maze <9:
@@ -344,7 +344,7 @@ Look around
 		-> MazeExit
 	}
 ==Maze16
-#caveturn2
+
 ~ Maze=Maze+1
 Look around
 +Turning left

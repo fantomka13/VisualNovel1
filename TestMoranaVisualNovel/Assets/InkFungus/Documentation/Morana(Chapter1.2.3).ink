@@ -29,7 +29,8 @@ VAR MonsterCave = 0
 VAR OrphaneBadLoop = 0
 VAR Lookinletter = 0
 
-->MazeExit
+->Chapter1
+
 
     
     

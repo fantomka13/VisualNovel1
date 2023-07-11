@@ -39,7 +39,7 @@ Cat "Miayaa Miay
 ->CatConversation3
 
 ==CatConversation3
-    Victor "May be one day you will tell me your name but or now i can call you
+    Victor "May be one day you will tell me your name but now i can call you
     *May be Potato whould suet you.
      ~Cat = Cat + 1
  ~Cat_Name = "Potato"
@@ -120,7 +120,7 @@ I didnt notice how a figure appeared behind me.She walked so quetly.I turned aro
 Grandma "Hi darling, so you are Victor if im not wrong
 Victor "Hi, yes, its me.
 Grandma "My name is Vassilisa Petrova but dont be formal just call me grandma.
-Victor "Okey, what about my parents?
+Victor "I opologize for asking immediately, what about my parents?
 Grandma "Ohh, I knew you are going to ask me this question. I am sorry, but i dont know where they are. One day they dissapired with you and i have nevere seen them again
 Grandma " I am lucky that at least you was found.
 *I am happy to be found too
@@ -172,7 +172,7 @@ Victor "Where is my knife?
 #knifeeactive
 
 One i toched it my head got dizzy.
-#knifeenotactive
+
 #musicdead
 #rotatebedroom
 The world started turning around me until i strted to see something in front of my eyes.
@@ -182,6 +182,7 @@ Voice "You are getting closer to do the task which i prepared for you.
 Victor "You are not real.Its just an illusion.
 #shakehorroryeys
 Voice "May be now its just an illusion but soon it will become very real.
+
 Voice "When you arrive , visit me at my home.
 Victor "I dont think going to the place to find a creepy voice is a safe idea.
 #rotatebedroomback
@@ -189,7 +190,7 @@ Voice "You will come,You will not have choice. There are some answers which you 
 #shakehorroryeys
 The illusion disappeared.
 #orphanroom
-#rotatebedroomback
+#knifeenotactive
 Victor "What if it was real.The voice didnt even tell me where to find him.Or may be its just stress and new emotions.
 Its time to start a new life.
 
