@@ -29,7 +29,7 @@ VAR MonsterCave = 0
 VAR OrphaneBadLoop = 0
 VAR Lookinletter = 0
 
-->Last_Preparation_Leaving
+->MazeExit
 
     
     

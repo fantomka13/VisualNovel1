@@ -140,7 +140,7 @@ Grandma "Okey, i am not going to distruct you anymore, puck your staff and go ou
 Grandma "Do you have any questions to ask before we live.
 *Can i take a {Cat_Name} with me
 He is my cat and a good friend?
-{ Cat == 3:
+{ Cat >= 2:
 		-> CatOrphanage_Yes
 	- else:
 		-> CatOrphanage_No
@@ -165,17 +165,18 @@ Victor "Okey, then see you later.
 ->Last_Preparation_Leaving
 ==Last_Preparation_Leaving
 #orphanroom
+
 Now i have some time with myself before i leave this place forever.
 I have to get my knife, the only thing which is left from my parents. 
 Victor "Where is my knife?
-#getknifeorphane
+#knifeeactive
 
 One i toched it my head got dizzy.
+#knifeenotactive
 #musicdead
 #rotatebedroom
 The world started turning around me until i strted to see something in front of my eyes.
 #horroryeys
-#shakehorroryeys
 Voice appered from nowhere. I think i heard it before but i cant remmember where.
 Voice "You are getting closer to do the task which i prepared for you.
 Victor "You are not real.Its just an illusion.
@@ -183,11 +184,14 @@ Victor "You are not real.Its just an illusion.
 Voice "May be now its just an illusion but soon it will become very real.
 Voice "When you arrive , visit me at my home.
 Victor "I dont think going to the place to find a creepy voice is a safe idea.
+#rotatebedroomback
 Voice "You will come,You will not have choice. There are some answers which you dont need now but will need at the future.
-#orphanroom
+#shakehorroryeys
 The illusion disappeared.
+#orphanroom
+#rotatebedroomback
 Victor "What if it was real.The voice didnt even tell me where to find him.Or may be its just stress and new emotions.
-Its time to atrt a new life.
+Its time to start a new life.
 
     -> END
 ->DONE

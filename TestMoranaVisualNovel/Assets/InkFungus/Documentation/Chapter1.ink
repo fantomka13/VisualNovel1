@@ -4,7 +4,8 @@
 === Chapter1 ===
 #backgroundfield1
 #introductionmusic
-This happened five years before the main event. 
+
+This happened seven years before the main event. 
 My name Victor and im going to tell you about my story.
 Back then, I couldn't imagine what is going to happen to me and the terrible truth about myself that I would have to uncover, the choices I would have to make.
 It all started in a small shelter. After the war many children ended up being left alone, so places like this was build.
@@ -37,7 +38,7 @@ Alexei knew i was joking but looked around just in case.
 ->RunningAway
 *Are you scared of them?
 ~Alexei = Alexei - 1
-Vladimir smiled" Hah do u really think i would be scared of puppies.
+Alexei smiled" Hah do u really think i would be scared of puppies.
 ->RunningAway
  *No, if they were here, they would have already eaten someone as loud as you,
 Alexei "No, They probably noticed your horrible smell and run away.
@@ -384,7 +385,6 @@ I heard a menacing hiss, and in front of me unfolded a horrifying scene. At that
 I intended to run back instantly, before the creature noticed me.
 
 *Stand still
-#monsterspawn
 I was too scared to even move my finger.The creature turned his head towords me.
 Creature "DO NOT MOVE!
 The creature put his clowes on Alexeys neck
@@ -465,7 +465,7 @@ I started running as fast as i could while the creature was busy eating my frien
 //Victor and Alexei fighting together or not.
 === SecondAttempHelp ===
 { 
--Alexei <=0:
+-Alexei <=1:
 ->DmitriyNotHelp
 	- else:
 	     
@@ -473,7 +473,8 @@ I started running as fast as i could while the creature was busy eating my frien
 	}
 
 ==DmitriyHelp
-I was ready to die 
+I was ready to die
+#monsterdestroy
 When suddenly i saw how dmitriy try to attack monster from behind. He distructed hom enough. I wanted to help him.
 Alexei "Run and ask for help,dont worry about me.
 And i started running towards the exit but i would never forgive myslef if he dies and ignoring Alexei joined the fight but it didnt last long with one long cut my body felt on the floor.
@@ -567,6 +568,7 @@ I walked back to the shelter. Of course no one belived my story and after a few 
 === VictorDied1 ===
 #musicdead
 #backgrounddead
+#monsterdestroy
 Everything become dark. I couldnt feel pain anymore jusr freedom of my soul. I have nothing to worry about but nothing to be happy too.
 Suddenly voice from nowhere whispered.
 Voice "I was expecting you much later.
